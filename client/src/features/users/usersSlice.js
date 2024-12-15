@@ -14,7 +14,7 @@ const initialState = {
 
 // Sign Up
 export const signUp = createAsyncThunk(
-  "https://taskmanager-wubw.onrender.com/user/signup",
+  "/signup",
   async (user, thunkAPI) => {
     try {
       const response = await axios.post("https://taskmanager-wubw.onrender.com/api/users/signup", user);
@@ -27,7 +27,7 @@ export const signUp = createAsyncThunk(
 
 // Log In
 export const logIn = createAsyncThunk(
-  "https://taskmanager-wubw.onrender.com/user/login",
+  "/login",
   async (credentials, thunkAPI) => {
     try {
       const response = await axios.post("https://taskmanager-wubw.onrender.com/api/users/login", credentials);
