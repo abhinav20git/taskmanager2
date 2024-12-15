@@ -32,13 +32,13 @@ function Dashboard() {
       dispatch(reset());
       dispatch(getAllTasks({ token, userId }));
     } else {
-      navigate("https://taskmanager-wubw.onrender.com//login");
+      navigate("https://taskmanager-wubw.onrender.com/login");
     }
   }, []);
 
   // Update function
   const updateTaskFunc = (id) => {
-    navigate(`https://taskmanager-wubw.onrender.com//task/${id}`);
+    navigate(`https://taskmanager-wubw.onrender.com/task/${id}`);
     dispatch(reset());
   };
 
@@ -93,7 +93,7 @@ function Dashboard() {
               type="button"
               title="Create task"
               onClick={() => {
-                navigate("https://taskmanager-wubw.onrender.com//task");
+                navigate("https://taskmanager-wubw.onrender.com/task");
                 dispatch(reset());
               }}
             />

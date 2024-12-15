@@ -12,7 +12,7 @@ const _dirname=path.resolve();
 // Middleware
 app.use(express.json());
 const corsOptions={
-  origin:"https://taskmanager-wubw.onrender.com/",
+  origin:"https://taskmanager-wubw.onrender.com",
   credentials:true
 }
 app.use(cors(corsOptions));
