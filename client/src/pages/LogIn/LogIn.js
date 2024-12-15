@@ -99,7 +99,7 @@ function LogIn() {
           <Button variant="primary" type="submit">
             Log In
           </Button>
-          <Link className="mx-4" to={"https://taskmanager-wubw.onrender.com/signup"}>
+          <Link className="mx-4" to={"/signup"}>
             Haven't sign up? Create an account.
           </Link>
         </Form>
