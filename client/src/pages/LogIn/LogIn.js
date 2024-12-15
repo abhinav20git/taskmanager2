@@ -46,7 +46,7 @@ function LogIn() {
 
   useEffect(() => {
     if (isSuccess) {
-      navigate("https://taskmanager-wubw.onrender.com/dashboard");
+      navigate("/dashboard");
       setCredentials(credentialsTemplate);
     }
 
