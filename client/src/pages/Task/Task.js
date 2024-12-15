@@ -24,7 +24,7 @@ function Task() {
 
   useEffect(() => {
     if (!isLoggedIn) {
-      navigate("https://taskmanager-wubw.onrender.com/login");
+      navigate("/login");
       
     }
   }, []);
@@ -87,7 +87,7 @@ function Task() {
   useEffect(() => {
     if (isSuccess) {
       toast.success(`Task ${id? "updated" : "created"} successfully!`);
-      navigate("https://taskmanager-wubw.onrender.com/dashboard");
+      navigate("/dashboard");
       dispatch(reset());
     }
 

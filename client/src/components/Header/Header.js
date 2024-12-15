@@ -21,7 +21,7 @@ function Header() {
             fontFamily: "Style Script, cursive",
             fontSize: "30px",
           }}
-          to={"https://taskmanager-wubw.onrender.com"}
+          to={"/"}
         >
           Task Management App
         </NavLink>
@@ -34,10 +34,10 @@ function Header() {
           >
             {isLoggedIn ? (
               <>
-              <NavLink className="my-3 mx-3" to={"https://taskmanager-wubw.onrender.com/dashboard"}>
+              <NavLink className="my-3 mx-3" to={"/dashboard"}>
                 Dashboard
               </NavLink>
-              <NavLink className="my-3 mx-3" to={"https://taskmanager-wubw.onrender.com/report"}>
+              <NavLink className="my-3 mx-3" to={"/report"}>
               Report
             </NavLink>
             </>
@@ -49,17 +49,17 @@ function Header() {
           <Form className="d-flex gap-3">
             {!isLoggedIn ? (
               <>
-                <NavLink to={"https://taskmanager-wubw.onrender.com/login"} title="Log-in">
+                <NavLink to={"/login"} title="Log-in">
                   <i className="fa-solid fa-right-to-bracket fa-xl" />
                 </NavLink>
-                <NavLink to={"https://taskmanager-wubw.onrender.com/signup"} title="Sign-up">
+                <NavLink to={"/signup"} title="Sign-up">
                   <i className="fa-solid fa-user-plus fa-xl" />
                 </NavLink>
               </>
             ) : (
               <>
                 <div>{userFullName}</div>
-                <Nav.Link onClick={()=>{dispatch(logOut()); navigate("https://taskmanager-wubw.onrender.com/login")}}  title="Log-out">
+                <Nav.Link onClick={()=>{dispatch(logOut()); navigate("/login")}}  title="Log-out">
                   <i className="fa-solid fa-right-from-bracket fa-xl" />
                 </Nav.Link>
               </>

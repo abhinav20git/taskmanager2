@@ -3,7 +3,6 @@ const usersModel = require("../../models/users/usersModel");
 const bycript = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-// const SECRET_KEY = "hamzaacodes";
 const key = process.env.SECRET_KEY;
 
 // Get token

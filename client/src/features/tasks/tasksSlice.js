@@ -21,11 +21,11 @@ const uId = "64e45c338ee532ddb77d3de4";
 
 // Create Task
 export const createTask = createAsyncThunk(
-  "https://taskmanager-wubw.onrender.com/task/create",
+  "/task/create",
   async (data, thunkAPI) => {
     try {
       const response = await axios.post(
-        "https://taskmanager-wubw.onrender.com//api/tasks/createtask",
+        "/tasks/createtask",
         data.finalTask,
         {
           headers: {
@@ -43,11 +43,11 @@ export const createTask = createAsyncThunk(
 
 // Get all tasks
 export const getAllTasks = createAsyncThunk(
-  "https://taskmanager-wubw.onrender.com/task/getalltasks",
+  "/task/getalltasks",
   async (data, thunkAPI) => {
     console.log(data);
     try {
-      const response = await axios.get("https://taskmanager-wubw.onrender.com/api/tasks/getalltasks", {
+      const response = await axios.get("/api/tasks/getalltasks", {
         headers: {
           "Auth-token": data.token,
           "userId": data.userId,
@@ -62,10 +62,10 @@ export const getAllTasks = createAsyncThunk(
 
 // Get single task
 export const getTask = createAsyncThunk(
-  "https://taskmanager-wubw.onrender.com/task/gettask",
+  "/task/gettask",
   async (data, thunkAPI) => {
     try {
-      const response = await axios.get(`https://taskmanager-wubw.onrender.com/api/tasks/gettask/${data.id}`, {
+      const response = await axios.get(`/api/tasks/gettask/${data.id}`, {
         headers: {
           "Auth-token": data.token,
         },
@@ -79,11 +79,11 @@ export const getTask = createAsyncThunk(
 
 // Update task
 export const updateTask = createAsyncThunk(
-  "https://taskmanager-wubw.onrender.com/task/updatetask",
+  "/task/updatetask",
   async (data, thunkAPI) => {
     try {
       const response = await axios.put(
-        `https://taskmanager-wubw.onrender.com/api/tasks/updatetask/${data.task._id}`,
+        `/api/tasks/updatetask/${data.task._id}`,
         data.task,
         {
           headers: {
@@ -100,10 +100,10 @@ export const updateTask = createAsyncThunk(
 
 // Delete task
 export const deleteTask = createAsyncThunk(
-  "https://taskmanager-wubw.onrender.com/task/deletetask",
+  "/task/deletetask",
   async (data, thunkAPI) => {
     try {
-      const response = await axios.delete(`https://taskmanager-wubw.onrender.com/api/tasks/deletetask/${data.id}`, {
+      const response = await axios.delete(`/api/tasks/deletetask/${data.id}`, {
         headers: {
           "Auth-token": data.token,
         },
