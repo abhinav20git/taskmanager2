@@ -46,7 +46,7 @@ function LogIn() {
 
   useEffect(() => {
     if (isSuccess) {
-      navigate("/dashboard");
+      navigate("https://taskmanager-wubw.onrender.com/dashboard");
       setCredentials(credentialsTemplate);
     }
 
@@ -99,7 +99,7 @@ function LogIn() {
           <Button variant="primary" type="submit">
             Log In
           </Button>
-          <Link className="mx-4" to={"/signup"}>
+          <Link className="mx-4" to={"https://taskmanager-wubw.onrender.com/signup"}>
             Haven't sign up? Create an account.
           </Link>
         </Form>

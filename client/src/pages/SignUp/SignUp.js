@@ -47,7 +47,7 @@ function SignUp() {
           password,
         })
       );
-      navigate('/login');
+      navigate('https://taskmanager-wubw.onrender.com/login');
     }
     setCredentials(credentialsTemplate);
   };
@@ -135,7 +135,7 @@ function SignUp() {
           <Button variant="primary" type="submit">
             Sign Up
           </Button>
-          <Link className="mx-4" to={"/login"}>
+          <Link className="mx-4" to={"https://taskmanager-wubw.onrender.com//login"}>
             Already have an account? Login!
           </Link>
         </Form>

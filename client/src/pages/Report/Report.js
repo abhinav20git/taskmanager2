@@ -16,7 +16,7 @@ function Report() {
           dispatch(reset());
           dispatch(getAllTasks({ token, userId }));
         } else {
-          navigate("/login");
+          navigate("https://taskmanager-wubw.onrender.com/login");
         }
       }, []);
     const calculatePercentage = (tasks, status) => {

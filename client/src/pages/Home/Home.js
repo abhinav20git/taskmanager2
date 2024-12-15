@@ -37,12 +37,12 @@ function Home() {
           <li>
             <b>Step 1: </b>
             Create an account.
-            <Link to={"/signup"}> (Click here)</Link>
+            <Link to={"https://taskmanager-wubw.onrender.com//signup"}> (Click here)</Link>
           </li>
           <li>
             <b>Step 2: </b>
             Log In to the app.
-            <Link to={"/login"}> (Click here)</Link>
+            <Link to={"https://taskmanager-wubw.onrender.com//login"}> (Click here)</Link>
           </li>
           <li>
             <b>Step 3: </b>

@@ -16,7 +16,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/">
+        <Route path="https://taskmanager-wubw.onrender.com/">
           <Route index element={<Home/>}/>
           <Route path="login" element={<LogIn/>}/>
           <Route path="signup" element={<SignUp/>}/>
