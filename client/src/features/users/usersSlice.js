@@ -17,7 +17,7 @@ export const signUp = createAsyncThunk(
   "/signup",
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post("https://taskmanager-wubw.onrender.com/api/users/signup", user);
+      const response = await axios.post("/signup", user);
       return thunkAPI.fulfillWithValue(response.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -30,7 +30,7 @@ export const logIn = createAsyncThunk(
   "/login",
   async (credentials, thunkAPI) => {
     try {
-      const response = await axios.post("https://taskmanager-wubw.onrender.com/api/users/login", credentials);
+      const response = await axios.post("/login", credentials);
       return thunkAPI.fulfillWithValue(response.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
