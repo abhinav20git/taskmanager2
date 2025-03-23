@@ -36,4 +36,3 @@ Start the frontend development server:
 2. npm start
 * The frontend development server will run on http://localhost:3000.
 
-Open your browser and navigate to http://localhost:3000 to access the Task Management Application. The app go through will be provided on Home page.
