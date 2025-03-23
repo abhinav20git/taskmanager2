@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
+const BASE_URL=process.env.BASE_URL;
 const initialState = {
   userId: localStorage.getItem("userId"),
   userFullName: localStorage.getItem("userFullName"),
@@ -14,10 +14,10 @@ const initialState = {
 
 // Sign Up
 export const signUp = createAsyncThunk(
-  "/signup",
+  `${BASE_URL}/signup`,
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post("/signup", user);
+      const response = await axios.post(`${BASE_URL}/signup`, user);
       return thunkAPI.fulfillWithValue(response.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -27,10 +27,10 @@ export const signUp = createAsyncThunk(
 
 // Log In
 export const logIn = createAsyncThunk(
-  "/login",
+  `${BASE_URL}/login`,
   async (credentials, thunkAPI) => {
     try {
-      const response = await axios.post("/login", credentials);
+      const response = await axios.post(`${BASE_URL}/login`, credentials);
       return thunkAPI.fulfillWithValue(response.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

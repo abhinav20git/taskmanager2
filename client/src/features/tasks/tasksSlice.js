@@ -2,7 +2,7 @@ import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 // const tokenn = JSON.parse(localStorage.getItem("userToken"));
 // const userIdddd = JSON.parse(localStorage.getItem("userId"));
-
+const BASE_URL=process.env.BASE_URL;
 const initialState = {
   tasks: [],
   tasksTemp: [],
@@ -21,11 +21,11 @@ const uId = "64e45c338ee532ddb77d3de4";
 
 // Create Task
 export const createTask = createAsyncThunk(
-  "/task/create",
+  `${BASE_URL}/task/create`,
   async (data, thunkAPI) => {
     try {
       const response = await axios.post(
-        "/tasks/createtask",
+        `${BASE_URL}/tasks/createtask`,
         data.finalTask,
         {
           headers: {
@@ -43,11 +43,11 @@ export const createTask = createAsyncThunk(
 
 // Get all tasks
 export const getAllTasks = createAsyncThunk(
-  "/task/getalltasks",
+  `${BASE_URL}/task/getalltasks`,
   async (data, thunkAPI) => {
     console.log(data);
     try {
-      const response = await axios.get("/api/tasks/getalltasks", {
+      const response = await axios.get(`${BASE_URL}/api/tasks/getalltasks`, {
         headers: {
           "Auth-token": data.token,
           "userId": data.userId,
@@ -62,10 +62,10 @@ export const getAllTasks = createAsyncThunk(
 
 // Get single task
 export const getTask = createAsyncThunk(
-  "/task/gettask",
+  `${BASE_URL}/task/gettask`,
   async (data, thunkAPI) => {
     try {
-      const response = await axios.get(`/api/tasks/gettask/${data.id}`, {
+      const response = await axios.get(`${BASE_URL}/api/tasks/gettask/${data.id}`, {
         headers: {
           "Auth-token": data.token,
         },
@@ -79,11 +79,11 @@ export const getTask = createAsyncThunk(
 
 // Update task
 export const updateTask = createAsyncThunk(
-  "/task/updatetask",
+  `${BASE_URL}/task/updatetask`,
   async (data, thunkAPI) => {
     try {
       const response = await axios.put(
-        `/api/tasks/updatetask/${data.task._id}`,
+        `${BASE_URL}/api/tasks/updatetask/${data.task._id}`,
         data.task,
         {
           headers: {
@@ -100,10 +100,10 @@ export const updateTask = createAsyncThunk(
 
 // Delete task
 export const deleteTask = createAsyncThunk(
-  "/task/deletetask",
+  `${BASE_URL}/task/deletetask`,
   async (data, thunkAPI) => {
     try {
-      const response = await axios.delete(`/api/tasks/deletetask/${data.id}`, {
+      const response = await axios.delete(`${BASE_URL}/api/tasks/deletetask/${data.id}`, {
         headers: {
           "Auth-token": data.token,
         },
